@@ -13,36 +13,41 @@ Backend-Only Food Ordering & Role-Based Order Management System
 </h3>
 
 <p align="center">
+  <b>Backend-Only Food Ordering & Role-Based Order Management System</b>
+</p>
 
-A secure and role-based food ordering backend inspired by Swiggy, built
-with Node.js, Express.js, MongoDB and Mongoose.
+<p align="center">
+A secure food-ordering backend inspired by Swiggy, built with Node.js, Express.js, MongoDB and Mongoose.
+</p>
 
+<p align="center">
+  <a href="https://nodejs.org/"><img src="https://skillicons.dev/icons?i=nodejs" alt="Node.js"></a>
+  <a href="https://expressjs.com/"><img src="https://skillicons.dev/icons?i=express" alt="Express.js"></a>
+  <a href="https://www.mongodb.com/"><img src="https://skillicons.dev/icons?i=mongodb" alt="MongoDB"></a>
+  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"><img src="https://skillicons.dev/icons?i=js" alt="JavaScript"></a>
+  <a href="https://git-scm.com/"><img src="https://skillicons.dev/icons?i=git" alt="Git"></a>
+  <a href="https://github.com/"><img src="https://skillicons.dev/icons?i=github" alt="GitHub"></a>
+  <a href="https://www.postman.com/"><img src="https://skillicons.dev/icons?i=postman" alt="Postman"></a>
+  <a href="https://code.visualstudio.com/"><img src="https://skillicons.dev/icons?i=vscode" alt="VS Code"></a>
 </p>
 
 <p align="center">
 
-<img src="https://skillicons.dev/icons?i=nodejs,express,mongodb,javascript,git,github,postman,vscode" />{=html}
 
-</p>
 
-<p align="center">
 
-<img src="https://img.shields.io/badge/Node.js-Backend-339933?style=for-the-badge&logo=node.js&logoColor=white" />{=html}
-<img src="https://img.shields.io/badge/Express.js-Framework-000000?style=for-the-badge&logo=express&logoColor=white" />{=html}
-<img src="https://img.shields.io/badge/MongoDB-Database-47A248?style=for-the-badge&logo=mongodb&logoColor=white" />{=html}
-<img src="https://img.shields.io/badge/Mongoose-ODM-880000?style=for-the-badge&logo=mongoose&logoColor=white" />{=html}
-<img src="https://img.shields.io/badge/JWT-Authentication-000000?style=for-the-badge&logo=jsonwebtokens&logoColor=white" />{=html}
-<img src="https://img.shields.io/badge/Joi-Validation-8E44AD?style=for-the-badge" />{=html}
-<img src="https://img.shields.io/badge/Postman-API_Testing-FF6C37?style=for-the-badge&logo=postman&logoColor=white" />{=html}
+
+
+
+
 
 </p>
 
 📌 Project Overview
 
-This project is a backend-only food ordering platform inspired by
-modern food delivery applications such as Swiggy.
+This project is a backend-only food ordering platform inspired by applications such as Swiggy.
 
-The system is designed around three main roles:
+The system provides three different user roles:
 
 👑 Admin
 
@@ -54,147 +59,61 @@ Each role has different permissions and protected APIs.
 
 The backend provides:
 
-🔐 JWT authentication
+🔐 JWT Authentication
 
-🔄 Access Token and Refresh Token
+♻️ Access Token & Refresh Token
 
-🔑 Admin Secret-Key Authorization
+🔑 Role-Based Access Control
 
-🛡️ Role-Based Access Control
+🛡️ Secret-Key Authorization
 
-👤 User management
+🔒 Ownership Validation
 
-🏪 Restaurant management
+🔐 Password Hashing using bcrypt
 
-🍕 Food management
+🏪 Restaurant Management
 
-🗂️ Category management
+🍕 Food Management
 
-🛒 Cart management
+🗂️ Category Management
 
-📦 Order management
+🛒 Cart Management
 
-🔎 Search and filtering
+📦 Order Management
 
-🔗 MongoDB Aggregation and $lookup
+🔎 Search & Filtering
 
-✅ Joi request validation
+✅ Joi Request Validation
 
-🚨 Error handling
+⚠️ Error Handling
 
-🔒 Ownership validation
+📊 Basic Admin Statistics
 
-🎯 Project Objectives
+✨ Main Features
 
-The main objective is to build a practical REST API for a food ordering
-platform while implementing real-world backend concepts.
-
-Core objectives
-
-Implement secure user authentication
-
-Implement JWT Access Token
-
-Implement JWT Refresh Token
-
-Hash passwords using bcryptjs
-
-Implement Role-Based Access Control
-
-Implement Admin Secret-Key Authorization
-
-Validate resource ownership
-
-Manage restaurants
-
-Manage food items
-
-Manage food categories
-
-Manage user carts
-
-Place and manage orders
-
-Implement search and filtering
-
-Use Joi for request validation
-
-Use MongoDB aggregation and $lookup
-
-Use proper HTTP status codes
-
-Implement centralized error handling
-
-Store sensitive configuration using environment variables
-
-✨ Features
-
-🔐 Authentication & Authorization
+🔐 Authentication
 
 User registration
 
-User login
+Restaurant owner registration
 
-User logout
+Login
 
 Email verification
 
-JWT Access Token
+Password hashing
 
-JWT Refresh Token
+JWT access token
+
+JWT refresh token
+
+Token refresh
+
+Logout
 
 Protected routes
 
-Password hashing using bcryptjs
-
-Role-Based Access Control
-
-JWT verification middleware
-
-Bearer Token authentication
-
-Admin Secret-Key Authorization
-
-Ownership validation
-
-Token expiration
-
-Joi request validation
-
-Authentication Flow
-
-                    REGISTER
-                       │
-                       ▼
-                Validate Request
-                       │
-                       ▼
-                Hash Password
-                   bcryptjs
-                       │
-                       ▼
-                  Create User
-                       │
-                       ▼
-                Email Verification
-                       │
-                       ▼
-                     LOGIN
-                       │
-             ┌─────────┴─────────┐
-             ▼                   ▼
-       Access Token        Refresh Token
-             │                   │
-             ▼                   ▼
-      Protected APIs      Generate New Token
-
-Protected APIs use:
-
-Authorization: Bearer ACCESS_TOKEN
-
-👑 Admin Module
-
-The Admin has access to platform-level management.
+👑 Admin
 
 Admin can:
 
@@ -214,77 +133,29 @@ Update categories
 
 Delete categories
 
-View basic platform statistics
-
-View order statistics
-
-View revenue statistics
-
-Admin security
+View basic order/revenue statistics
 
 Admin APIs are protected using:
 
-Admin JWT Token
-       │
-       ▼
+JWT Access Token
+        +
+Admin Role
+        +
 Secret Key
-       │
-       ▼
-Role Validation
-       │
-       ▼
-Admin Controller
-       │
-       ▼
-Database
 
-The Admin Secret Key is stored inside .env and should never be
-hard-coded.
-
-🏪 Restaurant Owner Module
-
-Restaurant owners can manage their own restaurant and its food items.
-
-Restaurant Management
+🏪 Restaurant Owner
 
 Restaurant owners can:
 
-Create restaurant
+Create their restaurant
 
-View their own restaurant
+View their restaurant
 
-Update their own restaurant
+Update their restaurant
 
 Manage restaurant status
 
-Soft-delete their restaurant
-
-Restaurant ownership is checked using the authenticated user's ID.
-
-Logged-in Restaurant Owner
-            │
-            ▼
-       Find Restaurant
-            │
-            ▼
-ownerId === req.user.id
-            │
-       ┌────┴────┐
-       ▼         ▼
-      YES        NO
-       │         │
-       ▼         ▼
-    Allow      Deny
-
-A restaurant owner cannot update or access another owner's restaurant.
-
-🍕 Food Management
-
-Restaurant owners can:
-
 Add food items
-
-View food items
 
 Update food items
 
@@ -292,65 +163,15 @@ Delete food items
 
 Manage food availability
 
-Each food item is connected to:
+View their restaurant orders
 
-Food
- │
- ├── restaurantId ───► Restaurant
- │
- └── categoryId ─────► Category
+Accept/reject orders
 
-Food information can include:
+Update order status
 
-Food name
+Owners cannot access another owner's restaurant or food data.
 
-Description
-
-Price
-
-Image
-
-Food type
-
-Availability
-
-Restaurant ID
-
-Category ID
-
-Delete status
-
-MongoDB aggregation and $lookup are used to display related restaurant
-and category information together.
-
-🗂️ Category Management
-
-Categories are managed by the Admin.
-
-Admin
-
-Create category
-
-Read categories
-
-Update category
-
-Delete category
-
-User / Restaurant Owner
-
-View categories
-
-Example categories:
-
-🍛 Biryani
-🍕 Pizza
-🍔 Burgers
-🥘 South Indian
-🍜 Chinese
-🍰 Desserts
-
-👤 User Module
+👤 User
 
 Users can:
 
@@ -360,8 +181,6 @@ Login
 
 Browse restaurants
 
-Search restaurants
-
 Search food
 
 Filter food
@@ -370,23 +189,17 @@ View categories
 
 Add food to cart
 
-Increase cart quantity
-
-Decrease cart quantity
+Update cart quantity
 
 Remove cart items
 
-View cart
-
 Clear cart
-
-Calculate cart total
 
 Place orders
 
-View their own orders
+View own orders
 
-Cancel their own orders
+Cancel own orders
 
 Users cannot:
 
@@ -394,798 +207,756 @@ Manage restaurants
 
 Manage food items
 
-Manage categories
+Change order status
 
-Accept or reject orders
-
-Change restaurant order status
-
-Access another user's orders
-
-🔎 Search & Filter
-
-The food platform supports basic search and filtering.
-
-Search
-
-Restaurant name
-
-Food name
-
-Filter
-
-Category
-
-Veg / Non-Veg
-
-Minimum price
-
-Maximum price
-
-Food availability
-
-Example:
-
-Search        : Biryani
-Food Type     : non-veg
-Minimum Price : 200
-Maximum Price : 500
-
-The backend can use MongoDB query conditions and regular expressions for
-flexible searching.
-
-🛒 Cart Management
-
-Each authenticated user has their own cart.
-
-Users can:
-
-Add food to cart
-
-Increase quantity
-
-Decrease quantity
-
-Remove food
-
-View cart
-
-Clear cart
-
-Calculate total price
-
-Cart relationship:
+🧩 Order Flow
 
 User
+ │
+ ├── Browse Restaurant
+ │
+ ├── Select Food
+ │
+ ├── Add Food to Cart
+ │
+ ├── Update Quantity
+ │
+ ├── Place Order
  │
  ▼
-Cart
+Restaurant Owner
  │
- ├── Food Item
- │      └── Quantity
+ ├── View Restaurant Orders
  │
- ├── Food Item
- │      └── Quantity
+ ├── Accept / Reject
  │
- └── Total Price
-
-Before creating an order, the backend checks that food items:
-
-Exist
-
-Are not deleted
-
-Are available
-
-📦 Order Management
-
-The order system is role-based.
-
-👤 User
-
-Users can:
-
-Place orders
-
-View their own orders
-
-Cancel their own pending orders
-
-🏪 Restaurant Owner
-
-Restaurant owners can:
-
-View orders belonging to their restaurant
-
-Accept orders
-
-Reject orders
-
-Update order status
-
-👑 Admin
-
-Admins can:
-
-View all orders
-
-Manage platform orders
-
-View order statistics
-
-View revenue statistics
-
-🔄 Order Status Workflow
-
-                    User
-                      │
-                      ▼
-                Add Food to Cart
-                      │
-                      ▼
-                  Place Order
-                      │
-                      ▼
-                   Pending
-                      │
-          ┌───────────┴───────────┐
-          │                       │
-          ▼                       ▼
-      Cancelled                Accepted
-                                  │
-                                  ▼
-                              Preparing
-                                  │
-                                  ▼
-                           Out for Delivery
-                                  │
-                                  ▼
-                              Delivered
-
-🔗 MongoDB Aggregation & $lookup
-
-MongoDB aggregation is used when related information needs to be
-returned together.
-
-Food Example
-
-Food
+ ├── Preparing
  │
- ├── $lookup → Restaurant
+ ├── Out for Delivery
  │
- └── $lookup → Category
+ ▼
+Delivered
 
-The API can return:
+Order Status
 
-{
-  "foodName": "Chicken Biryani",
-  "price": 250,
-  "restaurant": {
-    "restaurantName": "Spice Garden Restaurant"
-  },
-  "category": {
-    "name": "Biryani"
-  }
-}
+Pending
+   ↓
+Accepted
+   ↓
+Preparing
+   ↓
+Out for Delivery
+   ↓
+Delivered
 
-Order Example
+A user can cancel their own order according to the implemented cancellation rules.
 
-Order
- │
- ├── $lookup → User
- │
- └── $lookup → Restaurant
+🏗️ Project Architecture
 
-This allows the backend to return useful related data without making
-separate API calls.
-
-Common aggregation stages
-
-$match
-   │
-   ▼
-$lookup
-   │
-   ▼
-$unwind
-   │
-   ▼
-$lookup
-   │
-   ▼
-$sort
-   │
-   ▼
-$project
-
-🛡️ Ownership Validation
-
-Ownership validation prevents one user from accessing another user's
-resources.
-
-Restaurant ownership
-
-ownerId === req.user.id
-
-User order ownership
-
-userId === req.user.id
-
-Cart ownership
-
-userId === req.user.id
-
-This ensures that users and restaurant owners can only access resources
-they are authorized to manage.
-
-👥 Role & Permission Matrix
-
-Feature                   👑 Admin   🏪 Restaurant Owner   👤 User
-
-Register / Login             ✅              ✅              ✅
-View All Users               ✅              ❌              ❌
-Block / Unblock Users        ✅              ❌              ❌
-Create Restaurant            ❌              ✅              ❌
-View Restaurants             ✅              ✅              ✅
-Update Own Restaurant        ❌              ✅              ❌
-Manage Own Food              ❌              ✅              ❌
-Manage Categories            ✅              ❌              ❌
-View Categories              ✅              ✅              ✅
-Manage Cart                  ❌              ❌              ✅
-Place Order                  ❌              ❌              ✅
-View Own Orders              ❌              ❌              ✅
-Cancel Own Order             ❌              ❌              ✅
-View Restaurant Orders       ❌              ✅              ❌
-Accept / Reject Orders       ❌              ✅              ❌
-Update Order Status          ❌              ✅              ❌
-View All Orders              ✅              ❌              ❌
-View Statistics              ✅              ❌              ❌
-
-🏗️ System Architecture
-
-                         ┌───────────────────┐
-                         │      Postman      │
-                         │     API Client    │
-                         └─────────┬─────────┘
-                                   │
-                                   ▼
-                         ┌───────────────────┐
-                         │  Express Router   │
-                         │ Validation / RBAC  │
-                         └─────────┬─────────┘
-                                   │
-                                   ▼
-                         ┌───────────────────┐
-                         │ Authentication     │
-                         │ Middleware         │
-                         └─────────┬─────────┘
-                                   │
-                                   ▼
-                         ┌───────────────────┐
-                         │ Role Validation   │
-                         │ Ownership Check   │
-                         └─────────┬─────────┘
-                                   │
-                                   ▼
-                         ┌───────────────────┐
-                         │    Controller     │
-                         │ Business Logic    │
-                         └─────────┬─────────┘
-                                   │
-                                   ▼
-                         ┌───────────────────┐
-                         │     Mongoose      │
-                         │ CRUD / Aggregation│
-                         └─────────┬─────────┘
-                                   │
-                                   ▼
-                         ┌───────────────────┐
-                         │      MongoDB      │
-                         └───────────────────┘
-
-🗄️ Database Structure
-
-Main MongoDB collections:
-
-users
-   │
-   ├── restaurants
-   │      │
-   │      └── foods
-   │             │
-   │             └── categories
-   │
-   ├── carts
-   │      │
-   │      └── food items
-   │
-   └── orders
-          ├── user
-          ├── restaurant
-          └── food items
-
-emailVerifications
-
-Main Models
-
-User
-
-Restaurant
-
-Food
-
-Category
-
-Cart
-
-Order
-
-EmailVerification
+Client / Postman
+       │
+       ▼
+     Routes
+       │
+       ▼
+   Middleware
+       │
+       ├── JWT Authentication
+       ├── Role Validation
+       ├── Secret-Key Validation
+       └── Ownership Validation
+       │
+       ▼
+   Controller
+       │
+       ▼
+     Model
+       │
+       ▼
+    MongoDB
 
 📁 Project Structure
 
-Swiggy-Clone/
+Role-Based-Order-Management-System-Swiggy-Clone/
 │
 ├── config/
 │   ├── db.js
 │   └── emailVerify.js
 │
 ├── controller/
-│   ├── auth/
-│   ├── admin/
-│   ├── restaurant/
-│   ├── food/
-│   ├── category/
-│   ├── cart/
-│   └── order/
+│   ├── authController.js
+│   ├── userController.js
+│   ├── categoryController.js
+│   ├── restaurantController.js
+│   ├── foodController.js
+│   ├── cartController.js
+│   └── orderController.js
 │
 ├── middleware/
-│   ├── AuthCheck.js
-│   ├── allowRoles.js
-│   └── errorHandler.js
+│   ├── authCheck.js
+│   ├── roleCheck.js
+│   └── secretKey.js
 │
 ├── model/
 │   ├── userModel.js
+│   ├── verificationModel.js
+│   ├── categoryModel.js
 │   ├── restaurantModel.js
 │   ├── foodModel.js
-│   ├── categoryModel.js
 │   ├── cartModel.js
-│   ├── orderModel.js
-│   └── verificationModel.js
+│   └── orderModel.js
 │
 ├── routes/
-│   ├── authRouter.js
-│   ├── adminRouter.js
-│   ├── restaurantRouter.js
-│   ├── foodRouter.js
-│   ├── categoryRouter.js
-│   ├── cartRouter.js
-│   └── orderRouter.js
+│   ├── authRoutes.js
+│   ├── userRoutes.js
+│   ├── categoryRoutes.js
+│   ├── restaurantRoutes.js
+│   ├── foodRoutes.js
+│   ├── cartRoutes.js
+│   └── orderRoutes.js
 │
 ├── validation/
 │   ├── authValidation.js
+│   ├── categoryValidation.js
 │   ├── restaurantValidation.js
-│   ├── foodValidation.js
-│   └── categoryValidation.js
+│   └── foodValidation.js
 │
 ├── utils/
 │   ├── httpStatusCode.js
-│   └── logger.js
+│   ├── logger.js
+│   └── sendEmail.js
 │
+├── uploads/
 ├── .env
 ├── .gitignore
-├── app.js
-├── server.js
 ├── package.json
-└── README.md
-
-.env must never be committed to GitHub.
-
-🛠️ Technology Stack
-
-Backend
-
-Node.js
-
-Express.js
-
-JavaScript
-
-Database
-
-MongoDB
-
-Mongoose
-
-Authentication & Security
-
-JWT
-
-bcryptjs
-
-Role-Based Access Control
-
-Secret-Key Authorization
-
-Ownership Validation
-
-dotenv
-
-Validation
-
-Joi
-
-Image & File Handling
-
-Multer
-
-Cloudinary
-
-Development & Testing
-
-Git
-
-GitHub
-
-VS Code
-
-Postman
-
-Nodemon
-
-📡 API Modules
-
-The backend is organized into separate API modules.
-
-/api/v1/auth
-       │
-       ├── Register
-       ├── Login
-       ├── Logout
-       ├── Refresh Token
-       └── Verify Email
-
-
-/api/v1/admin
-       │
-       ├── Users
-       ├── Restaurants
-       ├── Categories
-       └── Orders
-
-
-/api/v1/restaurant
-       │
-       ├── Create Restaurant
-       ├── Read Own Restaurant
-       └── Update Own Restaurant
-
-
-/api/v1/food
-       │
-       ├── Add Food
-       ├── View Food
-       ├── Update Food
-       └── Delete Food
-
-
-/api/v1/category
-       │
-       ├── Create Category
-       ├── Read Category
-       ├── Update Category
-       └── Delete Category
-
-
-/api/v1/cart
-       │
-       ├── Add Food
-       ├── Update Quantity
-       ├── Remove Food
-       ├── View Cart
-       └── Clear Cart
-
-
-/api/v1/order
-       │
-       ├── Place Order
-       ├── View Own Orders
-       ├── Cancel Order
-       ├── Restaurant Orders
-       ├── Accept Order
-       ├── Reject Order
-       ├── Update Status
-       └── View All Orders
-
-🧪 API Testing with Postman
-
-The APIs can be tested using Postman.
-
-Authentication
-
-1. Register
-      ↓
-2. Verify Email
-      ↓
-3. Login
-      ↓
-4. Receive Access Token
-      ↓
-5. Send Access Token
-      ↓
-6. Access Protected API
-
-Authorization header
-
-Authorization: Bearer YOUR_ACCESS_TOKEN
-
-In Postman:
-
-Authorization
-    │
-    ├── Type: Bearer Token
-    │
-    └── Token: YOUR_ACCESS_TOKEN
-
-For Admin APIs, the required secret key should also be supplied
-according to the API implementation.
-
-⚙️ Installation
-
-1. Clone the Repository
-
-git clone https://github.com/Raktim-b/Role-Based-Order-Management-System-Swiggy-Clone-.git
-
-2. Navigate to the Project
-
-cd Role-Based-Order-Management-System-Swiggy-Clone-
-
-3. Install Dependencies
-
-npm install
-
-4. Create .env
-
-Create a .env file in the project root.
-
-PORT=4036
-
-MONGO_URI=your_mongodb_connection_string
-
-JWT_SECRET=your_jwt_secret
-JWT_REFRESH_SECRET=your_refresh_token_secret
-
-ADMIN_SECRET_KEY=your_admin_secret_key
-
-EMAIL_HOST=your_email_host
-EMAIL_PORT=587
-EMAIL_USER=your_email
-EMAIL_PASSWORD=your_email_password
-EMAIL_FROM=your_email
-
-CLOUDINARY_CLOUD_NAME=your_cloudinary_name
-CLOUDINARY_API_KEY=your_cloudinary_api_key
-CLOUDINARY_API_SECRET=your_cloudinary_api_secret
-
-Never upload real database passwords, JWT secrets, email passwords or
-Cloudinary credentials to GitHub.
-
-5. Start Development Server
-
-npm run dev
-
-6. Start Production Server
-
-npm start
-
-Local API
-
-http://localhost:4036
-
-📊 Basic Admin Statistics
-
-The Admin module can provide basic platform information such as:
-
-Total users
-
-Total restaurant owners
-
-Total restaurants
-
-Total food items
-
-Total orders
-
-Total delivered orders
-
-Total cancelled orders
-
-Total revenue
+└── server.js
+
+🗄️ Database Models
+
+👤 User
+
+User
+├── name
+├── email
+├── password
+├── role
+├── profileImage
+├── phone
+├── isBlocked
+├── isVerified
+├── refreshToken
+├── createdAt
+└── updatedAt
+
+🏪 Restaurant
+
+Restaurant
+├── ownerId
+├── restaurantName
+├── description
+├── address
+├── phone
+├── image
+├── isDeleted
+├── createdAt
+└── updatedAt
+
+🍕 Food
+
+Food
+├── ownerId
+├── restaurantId
+├── categoryId
+├── foodName
+├── description
+├── price
+├── image
+├── foodType
+├── isAvailable
+├── isDeleted
+├── createdAt
+└── updatedAt
+
+🗂️ Category
+
+Category
+├── name
+├── description
+├── isDeleted
+├── createdAt
+└── updatedAt
+
+🛒 Cart
+
+Cart
+├── userId
+├── items
+│   ├── foodId
+│   ├── quantity
+│   └── price
+├── totalPrice
+├── createdAt
+└── updatedAt
+
+📦 Order
+
+Order
+├── userId
+├── restaurantId
+├── items
+│   ├── foodId
+│   ├── foodName
+│   ├── quantity
+│   └── price
+├── totalPrice
+├── status
+├── createdAt
+└── updatedAt
+
+🔐 Authentication Flow
+
+Register
+   ↓
+Password Hashing
+   ↓
+Save User
+   ↓
+Email Verification
+   ↓
+Login
+   ↓
+Access Token + Refresh Token
+   ↓
+Protected API
+   ↓
+JWT Verification
+   ↓
+Role Check
+   ↓
+Controller
+
+Access Token
+
+The access token is used for protected API requests.
 
 Example:
 
-┌─────────────────────┐
-│ Total Users         │
-│        120          │
-└─────────────────────┘
+Authorization: Bearer <accessToken>
 
-┌─────────────────────┐
-│ Restaurants         │
-│         25          │
-└─────────────────────┘
+Refresh Token
 
-┌─────────────────────┐
-│ Total Orders        │
-│        450          │
-└─────────────────────┘
+The refresh token is used to generate a new access token when the access token expires.
 
-┌─────────────────────┐
-│ Total Revenue       │
-│     ₹1,25,000       │
-└─────────────────────┘
+🛡️ Role-Based Access Control
 
-🔒 Security
+Feature
 
-Security is an important part of this project.
+Admin
 
-Implemented security concepts
+Restaurant Owner
 
-Password hashing with bcryptjs
+User
 
-JWT Access Token
+Register/Login
 
-JWT Refresh Token
+✅
 
-Token expiration
+✅
 
-Protected routes
+✅
 
-Role validation
+View Users
 
-Admin Secret-Key Authorization
+✅
+
+❌
+
+❌
+
+Block/Unblock Users
+
+✅
+
+❌
+
+❌
+
+Manage Categories
+
+✅
+
+❌
+
+❌
+
+Create Restaurant
+
+❌
+
+✅
+
+❌
+
+Update Own Restaurant
+
+❌
+
+✅
+
+❌
+
+Add Food
+
+❌
+
+✅
+
+❌
+
+Update Own Food
+
+❌
+
+✅
+
+❌
+
+Delete Own Food
+
+❌
+
+✅
+
+❌
+
+Browse Restaurants
+
+✅
+
+✅
+
+✅
+
+Browse Food
+
+✅
+
+✅
+
+✅
+
+Cart
+
+❌
+
+❌
+
+✅
+
+Place Order
+
+❌
+
+❌
+
+✅
+
+View Own Orders
+
+❌
+
+❌
+
+✅
+
+Cancel Own Order
+
+❌
+
+❌
+
+✅
+
+View Restaurant Orders
+
+❌
+
+✅
+
+❌
+
+Accept/Reject Orders
+
+❌
+
+✅
+
+❌
+
+Update Order Status
+
+❌
+
+✅
+
+❌
+
+View All Orders
+
+✅
+
+❌
+
+❌
+
+🔎 MongoDB Aggregation & Lookup
+
+The project uses MongoDB aggregation for APIs where related information is required.
+
+Example:
+
+const orders = await orderModel.aggregate([
+  {
+    $match: {
+      userId: new mongoose.Types.ObjectId(req.user.id),
+    },
+  },
+  {
+    $lookup: {
+      from: "restaurants",
+      localField: "restaurantId",
+      foreignField: "_id",
+      as: "restaurant",
+    },
+  },
+  {
+    $unwind: "$restaurant",
+  },
+  {
+    $sort: {
+      createdAt: -1,
+    },
+  },
+]);
+
+This allows order data to be returned together with restaurant information.
+
+🔍 Search & Filter
+
+Food can be searched and filtered by:
+
+🍕 Food name
+
+🗂️ Category
+
+🥗 Veg / Non-Veg
+
+💰 Price
+
+🏪 Restaurant
+
+Restaurant search supports:
+
+Restaurant name
+
+Location/address
+
+🛒 Cart Management
+
+The cart belongs to the authenticated user.
+
+Supported operations:
+
+Add Food
+   ↓
+Increase Quantity
+   ↓
+Decrease Quantity
+   ↓
+Remove Food
+   ↓
+Clear Cart
+   ↓
+Place Order
+
+The backend calculates the cart total using:
+
+price × quantity
+
+📦 Order Management
+
+User APIs
+
+POST   /orders
+GET    /orders/my-orders
+PATCH  /orders/:id/cancel
+
+Restaurant Owner APIs
+
+GET    /orders/restaurant
+PATCH  /orders/:id/accept
+PATCH  /orders/:id/reject
+PATCH  /orders/:id/status
+
+Admin APIs
+
+GET    /orders
+
+👑 Admin User Management
+
+Admin can view all users:
+
+GET /api/v1/users
+
+Admin can block a user:
+
+PATCH /api/v1/users/:id/block
+
+Admin can unblock a user:
+
+PATCH /api/v1/users/:id/unblock
+
+The isBlocked field controls whether a user can access the platform.
+
+🔒 Ownership Validation
+
+Ownership validation prevents one restaurant owner from modifying another owner's data.
+
+Example:
+
+const food = await foodModel.findOne({
+  _id: req.params.id,
+  ownerId: req.user.id,
+  isDeleted: false,
+});
+
+If the food does not belong to the logged-in owner, the API returns an error.
+
+This same concept is used for:
+
+Restaurants
+
+Food items
+
+Restaurant orders
+
+User carts
+
+User orders
+
+✅ Request Validation
+
+Joi is used to validate incoming request data.
+
+Example:
+
+const { error, value } = registerValidation.validate(req.body);
+
+if (error) {
+  return res.status(400).json({
+    success: false,
+    message: error.details[0].message,
+  });
+}
+
+Validation is implemented for:
+
+Registration
+
+Login
+
+Category
+
+Restaurant
+
+Food
+
+Other required request bodies
+
+🛡️ Security Features
+
+The project implements:
+
+JWT authentication
+
+Refresh token authentication
+
+Password hashing using bcrypt
+
+Role-based authorization
+
+Secret-key authorization
 
 Ownership validation
 
-Joi request validation
+Joi validation
+
+Protected routes
 
 Environment variables
 
 Proper HTTP status codes
 
-Centralized error handling
+Centralized error responses
 
-Soft deletion for selected resources
+Soft deletion for applicable resources
 
-Secure request flow
+📡 API Modules
 
-Client
-  │
-  ▼
-Bearer Access Token
-  │
-  ▼
-JWT Verification
-  │
-  ▼
-Role Check
-  │
-  ▼
-Ownership Check
-  │
-  ▼
-Request Validation
-  │
-  ▼
-Controller
-  │
-  ▼
-MongoDB
+Authentication
 
-🚨 Error Handling
+POST /api/v1/auth/register
+POST /api/v1/auth/register-owner
+POST /api/v1/auth/login
+GET  /api/v1/auth/verify/:token
+POST /api/v1/auth/refresh-token
+POST /api/v1/auth/logout
 
-The application uses consistent HTTP status codes and JSON responses.
+Users
+
+GET   /api/v1/users
+PATCH /api/v1/users/:id/block
+PATCH /api/v1/users/:id/unblock
+
+Categories
+
+POST   /api/v1/categories
+GET    /api/v1/categories
+PUT    /api/v1/categories/:id
+DELETE /api/v1/categories/:id
+
+Restaurants
+
+POST /api/v1/restaurants
+GET  /api/v1/restaurants
+GET  /api/v1/restaurants/my
+PUT  /api/v1/restaurants/:id
+
+Food
+
+POST   /api/v1/foods
+GET    /api/v1/foods
+PUT    /api/v1/foods/:id
+DELETE /api/v1/foods/:id
+
+Cart
+
+POST   /api/v1/cart
+GET    /api/v1/cart
+PATCH  /api/v1/cart/:foodId
+DELETE /api/v1/cart/:foodId
+DELETE /api/v1/cart/clear
+
+Orders
+
+POST  /api/v1/orders
+GET   /api/v1/orders/my-orders
+PATCH /api/v1/orders/:id/cancel
+
+GET   /api/v1/orders/restaurant
+PATCH /api/v1/orders/:id/accept
+PATCH /api/v1/orders/:id/reject
+PATCH /api/v1/orders/:id/status
+
+GET   /api/v1/orders
+
+Adjust route paths according to the final route files in the project.
+
+🧪 API Testing
+
+The APIs were tested using Postman.
+
+Typical protected request:
+
+Authorization: Bearer YOUR_ACCESS_TOKEN
+
+For admin APIs, the request also requires the configured secret key.
 
 Example:
 
-{
-  "success": false,
-  "message": "Restaurant not found"
-}
+x-secret-key: YOUR_ADMIN_SECRET_KEY
 
-Common status codes:
+⚙️ Installation
 
-Status   Meaning
+1. Clone the repository
 
-200    Success
-201    Created
-400    Bad Request
-401    Unauthorized
-403    Forbidden
-404    Not Found
-409    Conflict
-500    Internal Server Error
+git clone https://github.com/Raktim-b/Role-Based-Order-Management-System-Swiggy-Clone.git
 
-🔄 Complete Project Workflow
+2. Move into the project
 
-                    USER
-                     │
-                     ▼
-                  Register
-                     │
-                     ▼
-               Email Verify
-                     │
-                     ▼
-                   Login
-                     │
-                     ▼
-              Access Token
-                     │
-                     ▼
-              Browse Food
-                     │
-                     ▼
-               Add to Cart
-                     │
-                     ▼
-                Place Order
-                     │
-                     ▼
-                  Pending
-                     │
-                     ▼
-              Restaurant Owner
-                     │
-              ┌──────┴──────┐
-              ▼             ▼
-           Accept         Reject
-              │
-              ▼
-          Preparing
-              │
-              ▼
-       Out for Delivery
-              │
-              ▼
-          Delivered
+cd Role-Based-Order-Management-System-Swiggy-Clone
 
-🧠 Skills Demonstrated
+3. Install dependencies
 
-This project demonstrates practical backend development skills in:
+npm install
 
-Node.js
+4. Create .env
 
-Express.js
+Example:
 
-JavaScript
+PORT=4036
 
-MongoDB
+MONGO_URI=your_mongodb_connection_string
 
-Mongoose
+JWT_SECRET=your_access_token_secret
 
-MVC Architecture
+JWT_REFRESH_SECRET=your_refresh_token_secret
 
-REST API Development
+ADMIN_SECRET_KEY=your_admin_secret_key
+
+EMAIL_FROM=your_email
+
+EMAIL_USER=your_email
+
+EMAIL_PASSWORD=your_email_password
+
+5. Start the server
+
+npm start
+
+For development:
+
+npm run dev
+
+📦 Main Dependencies
+
+express
+mongoose
+jsonwebtoken
+bcrypt / bcryptjs
+joi
+dotenv
+nodemailer
+winston
+cookie-parser
+cors
+
+🚨 HTTP Status Codes
+
+The project uses proper HTTP status codes.
+
+200 → Success
+201 → Created
+400 → Bad Request
+401 → Unauthorized
+403 → Forbidden
+404 → Not Found
+500 → Internal Server Error
+
+🎯 Project Objectives Completed
 
 JWT Authentication
 
-Access Tokens
+Access Token
 
-Refresh Tokens
-
-Role-Based Access Control
+Refresh Token
 
 Password Hashing
 
-Joi Validation
+Role-Based Access Control
 
-MongoDB Aggregation
-
-MongoDB $lookup
-
-CRUD Operations
-
-Ownership Validation
+Email Verification
 
 Restaurant Management
 
@@ -1197,7 +968,17 @@ Cart Management
 
 Order Management
 
+Ownership Validation
+
 Search & Filtering
+
+Admin User Management
+
+Block/Unblock Users
+
+Aggregation & $lookup
+
+Joi Validation
 
 Error Handling
 
@@ -1205,151 +986,49 @@ HTTP Status Codes
 
 Environment Variables
 
-Multer
-
-Cloudinary
-
 Postman API Testing
 
-Git & GitHub
+🚀 Future Improvements
 
-💡 Project Highlights
-
-Area                Implementation
-
-Architecture        MVC
-Runtime             Node.js
-Framework           Express.js
-Database            MongoDB
-ODM                 Mongoose
-Authentication      JWT
-Authorization       RBAC
-Password Security   bcryptjs
-Validation          Joi
-Image Upload        Multer + Cloudinary
-Database Queries    Mongoose
-Advanced Queries    Aggregation + $lookup
-API Testing         Postman
-Roles               Admin, Restaurant Owner, User
-Cart                User Based
-Orders              Role Based
-Ownership           User / Restaurant Validation
-Admin Security      JWT + Secret Key
-
-🚀 Future Enhancements
-
-The project can be extended with:
+Possible future improvements include:
 
 💳 Online payment integration
 
 📍 Live order tracking
 
-🚴 Delivery partner module
+⭐ Restaurant and food reviews
 
-⭐ Restaurant ratings and reviews
+🔔 Real-time notifications using Socket.IO
 
-⭐ Food ratings and reviews
+📱 Frontend using React.js
 
-❤️ Wishlist
+🗺️ Google Maps integration
 
-🎟️ Coupons and discounts
+📊 Advanced admin dashboard
 
-📍 Multiple delivery addresses
+📈 Detailed revenue analytics
 
-🔔 Push notifications
+🧾 Invoice generation
 
-⚡ Redis caching
+☁️ Cloudinary image upload
 
-📊 Advanced analytics
-
-📄 Pagination
-
-📚 Swagger API documentation
-
-🧪 Automated unit and integration testing
-
-🔔 Real-time order notifications
-
-🤝 Contributing
-
-Contributions are welcome.
-
-git checkout -b feature/new-feature
-
-git add .
-
-git commit -m "feat: add new feature"
-
-git push origin feature/new-feature
-
-Then create a Pull Request.
-
-📄 License
-
-This project is developed for educational, assessment, portfolio, and
-demonstration purposes.
+🚚 Delivery partner management
 
 👨‍💻 Author
 
 Raktim Bhattacharya
 
-Backend Developer
-
-Node.js • Express.js • MongoDB • Mongoose • JavaScript • JWT
-
-GitHub
-
-https://github.com/Raktim-b/Role-Based-Order-Management-System-Swiggy-Clone-.git
-
-⭐ Why This Project?
-
-This project goes beyond a simple CRUD application.
-
-It demonstrates a complete backend workflow involving:
-
-👑 Role-Based Access
-
-🔐 JWT Authentication
-
-🔑 Access & Refresh Tokens
-
-🛡️ Ownership Validation
-
-🔒 Admin Secret-Key Authorization
-
-🔐 Password Hashing
-
-🏪 Restaurant Management
-
-🍕 Food Management
-
-🗂️ Category Management
-
-🛒 Cart Management
-
-📦 Order Management
-
-🔎 Search & Filtering
-
-🔗 MongoDB Aggregation
-
-🔍 MongoDB $lookup
-
-📊 Admin Statistics
-
-✅ Joi Validation
-
-🚨 Error Handling
-
-🧪 Postman API Testing
-
-The project follows a practical backend architecture with
-authentication, authorization, validation, ownership checks, database
-relationships, aggregation and role-based order workflows.
+Backend Developer | Node.js | Express.js | MongoDB
 
 <p align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:FF6B35,50:FF8A4C,100:E85D04&height=120&section=footer" />{=html}
+⭐ If you find this project useful, consider giving it a star!
+
+</p>
+
+<p align="center">
+
+
 
 </p>
 
