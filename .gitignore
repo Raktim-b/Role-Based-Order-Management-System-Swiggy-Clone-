@@ -1,0 +1,12 @@
+# Node modules
+node_modules/
+
+# Others variables
+*.docx
+*.pdf
+*.txt
+
+# Environment variables
+.env
+.env.*
+!.env.example
